@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Bienvenue dans BuilderMania",
@@ -19,7 +20,10 @@ export default function RootLayout({
         className={``}
       >
         <Navbar />
-        <main className="w-[80vw] mx-auto">{children}</main>
+        <main className="w-[80vw] mx-auto">
+          {children}
+          <Analytics />
+          </main>
         <Footer />
       </body>
     </html>
