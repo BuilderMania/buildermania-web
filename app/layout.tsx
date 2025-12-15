@@ -16,12 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body
         className={``}
       >
         <Navbar />
-        <main className="w-[80vw] mx-auto">
+        <main className="w-full max-w-[80vw] mx-auto px-4 md:px-6">
           {children}
           <Analytics />
           <SpeedInsights />
